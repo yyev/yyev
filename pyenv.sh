@@ -27,6 +27,7 @@ function install()
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/${target_profile_name}
     echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/${target_profile_name}
     echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/${target_profile_name}
+    echo -e 'export PYTHON_CONFIGURE_OPTS="--enable-shared ${PYTHON_CONFIGURE_OPTS}"' >> ~/${target_profile_name}
 }
 
 function update()
