@@ -22,6 +22,8 @@ function install()
     sudo apt-get update
     sudo apt-get install git python-pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl
     sudo apt-get install libffi-dev
+    sudo apt install liblzma-dev
+    sudo apt-get install python3-tk
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
     init_bash_profile
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/${target_profile_name}
